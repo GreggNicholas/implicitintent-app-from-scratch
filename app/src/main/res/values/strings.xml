@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Implicit Intents App From Scratch</string>
+    <string name="todo">TODO</string>
+</resources>
