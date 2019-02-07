@@ -34,25 +34,25 @@ public class DisplayActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-            final String name = intent.getStringExtra("name");
-            String date = intent.getStringExtra("number");
-            String image = intent.getStringExtra("image");
+        final String name = intent.getStringExtra("name");
+        String date = intent.getStringExtra("number");
+        String image = intent.getStringExtra("image");
 
-            nameView.setText(name);
-            dateView.setText(date);
-            Picasso.get()
-                    .load(image)
-                    .into(imageView);
+        nameView.setText(name);
+        dateView.setText(date);
+        Picasso.get()
+                .load(image)
+                .into(imageView);
 
 
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri uri = Uri.parse(ADDRESS + name + ".html");
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                }
-            });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(ADDRESS + name + ".html");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
     }
 }
